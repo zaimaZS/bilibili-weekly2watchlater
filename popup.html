@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+    }
+    #videoList {
+      margin-top: 10px;
+    }
+    .video-item {
+      margin-bottom: 8px;
+      padding: 8px;
+      border: 1px solid #eee;
+      border-radius: 4px;
+    }
+    .add-to-watch {
+      margin-top: 4px;
+      padding: 2px 8px;
+      background: #00a1d6;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .add-to-watch:hover {
+      background: #0091c2;
+    }
+    .add-to-watch.added {
+      background: #999;
+      cursor: not-allowed;
+    }
+    .add-to-watch.error {
+      background: #e93b3b;
+    }
+    .batch-add-button {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      background: #00a1d6;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .batch-add-button:hover {
+      background: #0091c2;
+    }
+    .batch-add-button:disabled {
+      background: #999;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div id="videoList"></div>
+  <script src="popup.js"></script>
+</body>
+</html> 
