@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>每周必看导入稍后再看 - 设置</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #00a1d6;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 8px 16px;
+      background: #00a1d6;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0091c2;
+    }
+    .status {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 4px;
+      display: none;
+    }
+    .success {
+      background-color: #e3f7e3;
+      color: #2e7d32;
+    }
+    .error {
+      background-color: #fdecea;
+      color: #c62828;
+    }
+  </style>
+</head>
+<body>
+  <h1>每周必看导入稍后再看 - 设置</h1>
+  
+  <div class="form-group">
+    <label for="biliJct">CSRF令牌：</label>
+    <input type="text" id="biliJct" placeholder="自动从Cookie获取bili_jct值">
+    <small>提示：此值会自动从B站网页Cookie中的bili_jct字段获取，通常无需手动设置</small>
+  </div>
+
+  <div class="form-group">
+    <label for="upBlacklist">UP主黑名单：</label>
+    <textarea id="upBlacklist" rows="6" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:4px;box-sizing:border-box;" placeholder="每行一个UP主名称，或使用逗号、分号分隔"></textarea>
+    <small>说明：批量添加时，将跳过黑名单中的UP主；单个添加也会被禁止。</small>
+  </div>
+  
+  <button id="saveButton">保存设置</button>
+  
+  <div id="statusMessage" class="status"></div>
+  
+  <script src="constants.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
